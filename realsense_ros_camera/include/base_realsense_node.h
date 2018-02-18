@@ -149,6 +149,7 @@ namespace realsense_ros_camera
         std::map<stream_index_pair, bool> _is_frame_arrived;
         const std::string _namespace;
 
+        std::mutex _mtx;
         std::unique_ptr<rs2::disparity_transform> disparity_in;
         std::unique_ptr<rs2::disparity_transform> disparity_out;
         rs2::spatial_filter spatial;

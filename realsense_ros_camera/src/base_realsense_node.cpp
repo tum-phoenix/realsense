@@ -579,6 +579,7 @@ void BaseRealSenseNode::setupStreams()
                         }
                         else
                         {
+                            std::lock_guard<std::mutex> lock(_mtx);
                             f = disparity_in->process(f);
                             f = spatial.process(f);
                             f = temporal.process(f);
