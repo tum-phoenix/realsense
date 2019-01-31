@@ -25,7 +25,8 @@
 #include <csignal>
 #include <eigen3/Eigen/Geometry>
 #include <fstream>
-
+#include <mutex>
+#include <condition_variable>
 
 namespace realsense_ros_camera
 {
